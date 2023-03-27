@@ -3,8 +3,7 @@ console.log("page loaded");
   const form = document.querySelector("form");
   console.log(form);
   const blamBtn = document.querySelector("button");
-  console.log(blamBtn);
-  const results = document.querySelector("results-list");
+  const results = document.querySelector("#result-list");
   console.log(results);
 
   blamBtn.addEventListener("click", function(){
@@ -16,10 +15,12 @@ console.log("page loaded");
       document.querySelector('#favorite4').value,
       document.querySelector('#favorite5').value,
     ]
+    console.log(favoriteThings);
     console.log(favoriteThings[1]);
 
   const li_1 = document.createElement("li")
-  li_1.append(toString(favoriteThings[0]))
+  li_1.append(favoriteThings[0]);
+  console.log(li_1);
   results.append(li_1);
   })
 }
